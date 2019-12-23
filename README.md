@@ -1,5 +1,5 @@
-# Emotion-Detection
-Uses OpenCV and your front-facing camera to detect your emotion based on facial features. By accessing your live camera or webcam data, this model can detect some common emotions and send back a classification for live interaction. 
+# Emotion-Detection using OpenCV, Keras and Tensorflow 
+Uses your front-facing camera to detect emotion based on facial features. By accessing your live camera or webcam data, this model can detect some common emotions and send back a classification for live interaction. 
 
 ### Some examples
 #### Here are some examples with different backgrounds and lighting.
@@ -20,6 +20,8 @@ Uses OpenCV and your front-facing camera to detect your emotion based on facial 
 
 ## Features
   • If you are smiling and you say 'Cheese!' the camera will snap and save a picture. This is a hands-free approach to getting high-quality and happy selfies.
+  
+  • Works with friends! (multiple people supported)
 
   • Live feed classification. This model accesses the camera using OpenCV so it can classify emotions very quickly and return the results to the screen.
   
@@ -27,6 +29,12 @@ Uses OpenCV and your front-facing camera to detect your emotion based on facial 
   
   
 ## Technical 
+#### Implementation Details
+I used a sequential neural network with 4 hidden layers to classify the emotions. The model uses Keras which is TensorFlow's high-level API. The first 3 hidden layers use 300 neurons and the ReLU activation function. The 4th hidden layer has 50 neurons and also uses the ReLU activation function. The final output layer uses the sigmoid activation function to determine whether the user is smiling or not.
+
+The pipeline involves preprocessing the video in several stages. The first step is to constantly capture images from the video to process. One by one (very quickly of course), the images go into many different classifiers. The first classifier determines whether there are faces in the photo using haar cascade. If there are faces in the video the images are then sent to multiple other facial features recognizers including mouth recognition. Once a mouth(s) is recognized, the image is cropped around the mouth(s). This is important so that my model can focus on a specific area of the images. Once the model receives the mouth images, it removes the RGB values and converts it to grayscale. This reduces the dimensions of the image. At this point, the images are input into the model.
+
+
 #### Using tensorboard to visualize some of the runs epochs
 
 ##### Epoch Accuracy
