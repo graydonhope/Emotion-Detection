@@ -31,6 +31,7 @@ Uses OpenCV and your front-facing camera to detect your emotion based on facial 
 
 ##### Epoch Accuracy
 We can see that the number of epochs doesn't necessarily increase the accuracy. It is important to find a good balance for the number of epochs so that you aren't wasting time and resources on training the model when it isn't improving accuracy. 
+
 ![epoch accuracy](https://user-images.githubusercontent.com/41659296/71373507-672b7200-2585-11ea-81f2-cce869c8f761.PNG)
 
 
@@ -50,6 +51,7 @@ We can see that the number of epochs doesn't necessarily increase the accuracy. 
 
 ![first_few_epochs_loss](https://user-images.githubusercontent.com/41659296/71373539-8b874e80-2585-11ea-8f6f-ec25a084bb04.PNG)
 
+##### We see that the model quickly learns through the epochs
 
 ![epochs_training](https://user-images.githubusercontent.com/41659296/71373544-917d2f80-2585-11ea-9b42-442c53fcf581.PNG)
 
