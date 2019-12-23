@@ -34,6 +34,8 @@ I used a sequential neural network with 4 hidden layers to classify the emotions
 
 The pipeline involves preprocessing the video in several stages. The first step is to constantly capture images from the video to process. One by one (very quickly of course), the images go into many different classifiers. The first classifier determines whether there are faces in the photo using haar cascade. If there are faces in the video the images are then sent to multiple other facial features recognizers including mouth recognition. Once a mouth(s) is recognized, the image is cropped around the mouth(s). This is important so that my model can focus on a specific area of the images. Once the model receives the mouth images, it removes the RGB values and converts it to grayscale. This reduces the dimensions of the image. At this point, the images are input into the model.
 
+After the model is trained, it is saved in the h5 format so that other files may import it and use it without any training requied. 
+
 
 #### Using tensorboard to visualize some of the runs epochs
 
@@ -67,5 +69,8 @@ We can see that the number of epochs doesn't necessarily increase the accuracy. 
 ##### Full Training Curves
 ![training_curves](https://user-images.githubusercontent.com/41659296/71373560-a22da580-2585-11ea-9840-d1eb299d4b6f.PNG)
 
+
+#### ToDo: Implement early stopping for more efficient training
+This was not initially implemented because I can already train the model very quickly and ended up with great performance accuracy. I am working with a small amount of data, so the training process was very quick.
 
 #### Please note only the model is uploaded at this time. There are other supporting files used to interact with the camera and data which I am keeping private at this time. 
