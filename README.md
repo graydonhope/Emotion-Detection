@@ -24,5 +24,38 @@ Uses OpenCV and your front-facing camera to detect your emotion based on facial 
   • Live feed classification. This model accesses the camera using OpenCV so it can classify emotions very quickly and return the results to the screen.
   
   • Still functional with different lighting and noise in picture (ex with cat or glasses on)
+  
+  
+## Technical 
+#### Using tensorboard to visualize some of the runs epochs
+
+##### Epoch Accuracy
+![epoch accuracy](https://user-images.githubusercontent.com/41659296/71373507-672b7200-2585-11ea-81f2-cce869c8f761.PNG)
+
+
+##### Epoch Loss
+![epoch loss](https://user-images.githubusercontent.com/41659296/71373515-6a266280-2585-11ea-8e7c-de57d2dbf200.PNG)
+
+
+#### Alternative Runs
+
+![epoch accuracy 1](https://user-images.githubusercontent.com/41659296/71373521-6e528000-2585-11ea-9569-32d5b684787f.PNG)
+
+
+
+![first_few-epochs_accuracy](https://user-images.githubusercontent.com/41659296/71373533-82967d00-2585-11ea-93b4-4d8694452c6a.PNG)
+
+
+
+
+![first_few_epochs_loss](https://user-images.githubusercontent.com/41659296/71373539-8b874e80-2585-11ea-8f6f-ec25a084bb04.PNG)
+
+
+![epochs_training](https://user-images.githubusercontent.com/41659296/71373544-917d2f80-2585-11ea-9b42-442c53fcf581.PNG)
+
+
+##### Full Training Curves
+![training_curves](https://user-images.githubusercontent.com/41659296/71373560-a22da580-2585-11ea-9840-d1eb299d4b6f.PNG)
+
 
 #### Please note only the model is uploaded at this time. There are other supporting files used to interact with the camera and data which I am keeping private at this time. 
