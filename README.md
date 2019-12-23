@@ -30,6 +30,7 @@ Uses OpenCV and your front-facing camera to detect your emotion based on facial 
 #### Using tensorboard to visualize some of the runs epochs
 
 ##### Epoch Accuracy
+We can see that the number of epochs doesn't necessarily increase the accuracy. It is important to find a good balance for the number of epochs so that you aren't wasting time and resources on training the model when it isn't improving accuracy. 
 ![epoch accuracy](https://user-images.githubusercontent.com/41659296/71373507-672b7200-2585-11ea-81f2-cce869c8f761.PNG)
 
 
@@ -44,7 +45,6 @@ Uses OpenCV and your front-facing camera to detect your emotion based on facial 
 
 
 ![first_few-epochs_accuracy](https://user-images.githubusercontent.com/41659296/71373533-82967d00-2585-11ea-93b4-4d8694452c6a.PNG)
-
 
 
 
